@@ -14,8 +14,8 @@ class _CarroselState extends State<Carrosel> {
   int _current = 0;
   List imgList = [
         'OnePiece.jpg'
-        'KawaiiDake.jpg'
-        'Kaguya.jpg'
+        'Jujutsu.jpg'
+        'Nanatsu.jpg'
   ];
 
   @override
@@ -23,7 +23,7 @@ class _CarroselState extends State<Carrosel> {
     return Column(
       children: [
         Padding(
-          padding: EdgeInsets.fromLTRB(0, 20, 0, 0),
+          padding: EdgeInsets.fromLTRB(0, 0, 0, 0),
         ),
         CarouselSlider(
           items: [
@@ -42,7 +42,7 @@ class _CarroselState extends State<Carrosel> {
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(4.0),
                 image: DecorationImage(
-                  image: AssetImage('KawaiiDake.jpg'),
+                  image: AssetImage('Jujutsu.jpg'),
                   fit: BoxFit.cover,
                 ),
               ),
@@ -52,7 +52,7 @@ class _CarroselState extends State<Carrosel> {
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(4.0),
                 image: DecorationImage(
-                  image: AssetImage('Kaguya.jpg'),
+                  image: AssetImage('Nanatsu.jpg'),
                   fit: BoxFit.cover,
                 ),
               ),
