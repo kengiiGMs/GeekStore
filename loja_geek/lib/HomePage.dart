@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 
 import 'Conteudo.dart';
 import 'carrosel.dart';
-import 'extendmenu.dart';
+
 
 class HomePage extends StatefulWidget {
   const HomePage({ Key? key }) : super(key: key);
@@ -26,20 +26,28 @@ class _HomePageState extends State<HomePage> {
     /* FimItensBottomBar */
 
     return Scaffold(
-      appBar: AppBar(
-        elevation: 0,
-        title: Center(child: Text('teste')) ,
-        actions: [
-        IconButton(
-          icon:  const Icon(Icons.search),
-          onPressed: () {
-            showSearch(
-              context: context,
-              delegate: MySearchDelegate(),
-            );
-          },
-        )          
-        ],
+      extendBody: true,
+      extendBodyBehindAppBar: true,
+      appBar: 
+      
+      
+      
+      PreferredSize(
+        preferredSize: Size.fromHeight(90),
+        child: AppBar(
+          shape: RoundedRectangleBorder(borderRadius: BorderRadius.only(bottomLeft: Radius.circular(30), bottomRight: Radius.circular(30))),
+          centerTitle: true,
+          flexibleSpace: Container(decoration: BoxDecoration(
+            borderRadius: BorderRadius.only(bottomLeft: Radius.circular(30), bottomRight: Radius.circular(30)),
+            gradient: LinearGradient(colors: [Colors.purple, Colors.deepPurple],
+            begin: Alignment.topLeft,
+            end: Alignment.bottomRight,
+            )
+            ),
+            ),
+          title: Text('teste'),
+          
+        ),
       ),
       /* Drawer */
       drawer: Drawer(
@@ -47,19 +55,14 @@ class _HomePageState extends State<HomePage> {
           children: [
             UserAccountsDrawerHeader(
               currentAccountPicture: ClipOval(
-                child: Image.asset('LuffyIMG.jpg')
+                child: Image.asset('vivi.jpg')
                 ),
-                accountName: Text('Teste'), 
-                accountEmail: Text('Teste@email.com')
+                accountName: Text('Mahki'), 
+                accountEmail: Text('Mahki@gmail.com')
                 ),
             ListTile(
               leading: Icon(Icons.account_box_outlined),
               title: Text('Ver Perfil'),
-              onTap: () {},
-            ),
-            ListTile(
-              leading: Icon(Icons.manage_accounts_outlined),
-              title: Text('Configurações'),
               onTap: () {},
             ),
             /* Icons Categoria */
@@ -83,6 +86,16 @@ class _HomePageState extends State<HomePage> {
               trailing: Icon(Icons.arrow_right,color: Colors.deepPurple,), 
               onTap: () {},
             ),
+            ListTile(
+              leading: Icon(Icons.manage_accounts_outlined),
+              title: Text('Configurações'),
+              onTap: () {},
+            ),
+            ListTile(
+              leading: Icon(Icons.backspace_outlined),
+              title: Text('Sair'),
+              onTap: () {},
+            ),
           ],
         ),
       ),/* Fim Drawer */
@@ -99,7 +112,6 @@ class _HomePageState extends State<HomePage> {
       /* Principal */
       body: ListView(
           children: <Widget>[
-            ExtendMenu(),
             Carrosel(),
             Conteudo(),
           ],
