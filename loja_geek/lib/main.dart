@@ -1,7 +1,7 @@
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:loja_geek/Conteudo.dart';
-import 'package:responsive_sizer/responsive_sizer.dart';
+
 
 import 'HomePage.dart';
 
@@ -21,12 +21,10 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.deepPurple,
       ),
-      home: ResponsiveSizer(
-   builder: (context, orientation, screenType) {
-     return const HomePage();
-   },
- ),
-    );
+      home: HomePage(),
+  
+ );
+    
   }
 }
 

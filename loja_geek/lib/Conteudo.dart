@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:responsive_sizer/responsive_sizer.dart';
+
 
 class Conteudo extends StatefulWidget {
   const Conteudo({ Key? key }) : super(key: key);
@@ -13,7 +13,6 @@ class _ConteudoState extends State<Conteudo> {
   @override
   Widget build(BuildContext context) {
   return Container(
-    width: Adaptive.w(90),
     margin: EdgeInsets.fromLTRB(0, 10, 0, 0),
     
     child: Column(
@@ -49,8 +48,27 @@ class _ConteudoState extends State<Conteudo> {
                   ],
                 ),
               ),
-            ]     
-          )
+            ],     
+          ),
+        ),
+        Container(
+          margin: EdgeInsets.fromLTRB(20, 20, 20, 0),
+          alignment: Alignment.center,
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+                Container(
+                  child: Text("Recomendações",style: TextStyle(fontWeight: FontWeight.bold, color: Colors.deepPurple),),
+                ),
+                Container(
+                  child: ElevatedButton(
+                    child: Text("Ver mais"),
+                    onPressed:() {
+                    },
+                  ),
+                ),
+              ],
+          ),
         )
       ]
     ),
@@ -58,4 +76,3 @@ class _ConteudoState extends State<Conteudo> {
   }
 }
 
-//https://pub.dev/packages/responsive_sizer

@@ -1,6 +1,7 @@
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:loja_geek/recomendados.dart';
 
 import 'Conteudo.dart';
 import 'carrosel.dart';
@@ -27,28 +28,39 @@ class _HomePageState extends State<HomePage> {
 
     return Scaffold(
       extendBody: true,
+      /* Appbar */
       extendBodyBehindAppBar: true,
       appBar: 
-      
-      
-      
       PreferredSize(
-        preferredSize: Size.fromHeight(90),
+        preferredSize: Size.fromHeight(70),
         child: AppBar(
           shape: RoundedRectangleBorder(borderRadius: BorderRadius.only(bottomLeft: Radius.circular(30), bottomRight: Radius.circular(30))),
           centerTitle: true,
-          flexibleSpace: Container(decoration: BoxDecoration(
-            borderRadius: BorderRadius.only(bottomLeft: Radius.circular(30), bottomRight: Radius.circular(30)),
-            gradient: LinearGradient(colors: [Colors.purple, Colors.deepPurple],
-            begin: Alignment.topLeft,
-            end: Alignment.bottomRight,
-            )
+          flexibleSpace: 
+            Container(
+              decoration: BoxDecoration(
+              borderRadius: BorderRadius.only(bottomLeft: Radius.circular(30), bottomRight: Radius.circular(30)),
+              gradient: LinearGradient(colors: [Colors.purple, Colors.deepPurple],
+              begin: Alignment.topLeft,
+              end: Alignment.bottomRight,
+              ),
+              ),
             ),
-            ),
-          title: Text('teste'),
-          
+          title: Text('GeekStore'),
+          actions: [
+            IconButton(
+            icon:  const Icon(Icons.search),
+              onPressed: () {
+                showSearch(
+                  context: context,
+                  delegate: MySearchDelegate(),
+                );
+              },
+            ),          
+          ],
         ),
       ),
+      /* FimAppbar */
       /* Drawer */
       drawer: Drawer(
         child: Column(
@@ -65,7 +77,6 @@ class _HomePageState extends State<HomePage> {
               title: Text('Ver Perfil'),
               onTap: () {},
             ),
-            /* Icons Categoria */
             ListTile(
               title: Text('Vestuário'),
               trailing: Icon(Icons.arrow_right,color: Colors.deepPurple,),
@@ -107,15 +118,17 @@ class _HomePageState extends State<HomePage> {
         height: 60,
         index: 1,
         color: Colors.deepPurple,
-        ), /* FimbottomBar */
+      ), /* FimbottomBar */
+    /* FimBottomBar */
 
       /* Principal */
       body: ListView(
           children: <Widget>[
             Carrosel(),
-            Conteudo(),
+            Conteudo(), 
           ],
-        ),/* FimPrincipal */
+        ),
+      /* FimPrincipal */
 
     );
   }
