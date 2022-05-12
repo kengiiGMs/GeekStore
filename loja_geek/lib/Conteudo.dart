@@ -69,6 +69,26 @@ class _ConteudoState extends State<Conteudo> {
                 ),
               ],
           ),
+        ),
+        SingleChildScrollView(
+          scrollDirection: Axis.horizontal,
+          child: Container(
+            child: Row(
+              children: [
+                SizedBox(
+                  width: 200,
+                    child: Column(
+                      children: [
+                        AspectRatio(aspectRatio: 1.25,
+                        child: Image.asset("ace.jpg"),
+                        ),
+                        Text("OnePiece - Ace",style: TextStyle(),),
+                      ],
+                    ),
+                ),
+              ],
+            ),
+          ),
         )
       ]
     ),
@@ -76,3 +96,4 @@ class _ConteudoState extends State<Conteudo> {
   }
 }
 
+//https://www.youtube.com/watch?v=sTeE-RDakbQ&ab_channel=TheFlutterWay

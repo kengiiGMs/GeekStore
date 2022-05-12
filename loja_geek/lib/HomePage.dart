@@ -1,7 +1,7 @@
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:loja_geek/recomendados.dart';
+
 
 import 'Conteudo.dart';
 import 'carrosel.dart';
