@@ -46,7 +46,7 @@ class _HomePageState extends State<HomePage> {
               ),
               ),
             ),
-          title: Text('GeekStore'),
+          title: Text('GeekStores'),
           actions: [
             IconButton(
             icon:  const Icon(Icons.search),

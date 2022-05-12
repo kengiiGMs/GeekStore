@@ -52,20 +52,14 @@ class _ConteudoState extends State<Conteudo> {
           ),
         ),
         Container(
-          margin: EdgeInsets.fromLTRB(20, 20, 20, 0),
+          margin: EdgeInsets.fromLTRB(20, 20, 20, 20),
+         
           alignment: Alignment.center,
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
                 Container(
                   child: Text("Recomendações",style: TextStyle(fontWeight: FontWeight.bold, color: Colors.deepPurple),),
-                ),
-                Container(
-                  child: ElevatedButton(
-                    child: Text("Ver mais"),
-                    onPressed:() {
-                    },
-                  ),
                 ),
               ],
           ),
@@ -82,13 +76,49 @@ class _ConteudoState extends State<Conteudo> {
                         AspectRatio(aspectRatio: 1.25,
                         child: Image.asset("ace.jpg"),
                         ),
-                        Text("OnePiece - Ace",style: TextStyle(),),
+                        Text("OnePiece - Ace",style: TextStyle(fontWeight: FontWeight.bold, color: Colors.deepPurple),),
                       ],
                     ),
                 ),
+                SizedBox(
+                  width: 200,
+                    child: Column(
+                      children: [
+                        AspectRatio(aspectRatio: 1.25,
+                        child: Image.asset("dragonball.jpg"),
+                        ),
+                        Text("Chaveiro DragonBall",style: TextStyle(fontWeight: FontWeight.bold, color: Colors.deepPurple),),
+                      ],
+                    ),
+                ),
+                SizedBox(
+                  width: 200,
+                    child: Column(
+                      children: [
+                        AspectRatio(aspectRatio: 1.25,
+                        child: Image.asset("shingeki.jpg"),
+                        ),
+                        Text("Colar Shingeki no kyodin ",style: TextStyle(fontWeight: FontWeight.bold, color: Colors.deepPurple),),
+                      ],
+                    ),
+                )
               ],
             ),
           ),
+        ),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.end,
+          children: [
+            Container(
+              padding: EdgeInsets.all(10),
+                  child: ElevatedButton(
+                    
+                    child: Text("Ver mais"),
+                    onPressed:() {
+                    },
+                  ),
+                ),
+          ],
         )
       ]
     ),
