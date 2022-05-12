@@ -63,7 +63,7 @@ class _HomePageState extends State<HomePage> {
       /* FimAppbar */
       /* Drawer */
       drawer: Drawer(
-        child: Column(
+        child: ListView(
           children: [
             UserAccountsDrawerHeader(
               currentAccountPicture: ClipOval(
@@ -72,31 +72,110 @@ class _HomePageState extends State<HomePage> {
                 accountName: Text('Mahki'), 
                 accountEmail: Text('Mahki@gmail.com')
                 ),
-            ListTile(
+
+              ListTile(
               leading: Icon(Icons.account_box_outlined),
               title: Text('Ver Perfil'),
               onTap: () {},
             ),
-            ListTile(
-              title: Text('Vestuário'),
-              trailing: Icon(Icons.arrow_right,color: Colors.deepPurple,),
+
+               ExpansionTile(
+        title: Text("Vestuário"),
+        trailing: Icon(Icons.arrow_drop_down_outlined,color: Colors.deepPurple,),
+        children: <Widget>[ListTile(
+              title: Text('Chapéus'),
+              trailing: Icon(Icons.arrow_right,color: Colors.deepPurple,), 
               onTap: () {},
             ),
             ListTile(
+              title: Text('Camisetas'),
+              trailing: Icon(Icons.arrow_right,color: Colors.deepPurple,), 
+              onTap: () {},
+            ),
+            ListTile(
+              title: Text('Calças'),
+              trailing: Icon(Icons.arrow_right,color: Colors.deepPurple,), 
+              onTap: () {},
+            ),
+            ListTile(
+              title: Text('Vestidos'),
+              trailing: Icon(Icons.arrow_right,color: Colors.deepPurple,), 
+              onTap: () {},
+            ),
+            ],),
+
+      ExpansionTile(
+        title: Text("Acessórios"),
+        trailing: Icon(Icons.arrow_drop_down_outlined,color: Colors.deepPurple,),
+        children: <Widget>[ListTile(
+              title: Text('Para celular'),
+              trailing: Icon(Icons.arrow_right,color: Colors.deepPurple,), 
+              onTap: () {},
+            ),
+            ListTile(
+              title: Text('Bolsas'),
+              trailing: Icon(Icons.arrow_right,color: Colors.deepPurple,), 
+              onTap: () {},
+            ),
+            ListTile(
+              title: Text('Máscaras'),
+              trailing: Icon(Icons.arrow_right,color: Colors.deepPurple,), 
+              onTap: () {},
+            ),
+            ListTile(
+              title: Text('Bijuterias'),
+              trailing: Icon(Icons.arrow_right,color: Colors.deepPurple,), 
+              onTap: () {},
+            ),
+            ],),
+
+             ExpansionTile(
+        title: Text("Livros"),
+        trailing: Icon(Icons.arrow_drop_down_outlined,color: Colors.deepPurple,),
+        children: <Widget>[ListTile(
+              title: Text('Mangás'),
+              trailing: Icon(Icons.arrow_right,color: Colors.deepPurple,), 
+              onTap: () {},
+            ),
+            ListTile(
+              title: Text('HQ'),
+              trailing: Icon(Icons.arrow_right,color: Colors.deepPurple,), 
+              onTap: () {},
+            ),ListTile(
               title: Text('Acessórios'),
               trailing: Icon(Icons.arrow_right,color: Colors.deepPurple,), 
               onTap: () {},
+            ),ListTile(
+              title: Text('Cadernos'),
+              trailing: Icon(Icons.arrow_right,color: Colors.deepPurple,), 
+              onTap: () {},
             ),
-            ListTile(
-              title: Text('Livros'),
+            ],),
+
+      ExpansionTile(
+        title: Text("Colecionáveis"),
+        trailing: Icon(Icons.arrow_drop_down_outlined,color: Colors.deepPurple,),
+        children: <Widget>[ListTile(
+              title: Text('Action Figures'),
               trailing: Icon(Icons.arrow_right,color: Colors.deepPurple,), 
               onTap: () {},
             ),
             ListTile(
-              title: Text('Colecionários'),
+              title: Text('Estatuetas'),
+              trailing: Icon(Icons.arrow_right,color: Colors.deepPurple,), 
+              onTap: () {},
+            ),ListTile(
+              title: Text('Jogos'),
+              trailing: Icon(Icons.arrow_right,color: Colors.deepPurple,), 
+              onTap: () {},
+            ),ListTile(
+              title: Text('Pelúcias'),
               trailing: Icon(Icons.arrow_right,color: Colors.deepPurple,), 
               onTap: () {},
             ),
+            ],
+      ),
+            
             ListTile(
               leading: Icon(Icons.manage_accounts_outlined),
               title: Text('Configurações'),
