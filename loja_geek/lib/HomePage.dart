@@ -70,7 +70,10 @@ class _HomePageState extends State<HomePage> {
                 child: Image.asset('vivi.jpg')
                 ),
                 accountName: Text('Mahki'), 
-                accountEmail: Text('Mahki@gmail.com')
+                accountEmail: Text('Mahki@gmail.com'),
+                decoration: BoxDecoration(
+                  image: DecorationImage(image: AssetImage("perfil.jpg"), fit: BoxFit.cover)
+                ),
                 ),
 
               ListTile(

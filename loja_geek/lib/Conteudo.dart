@@ -43,7 +43,7 @@ class _ConteudoState extends State<Conteudo> {
               Container(
                 margin: EdgeInsets.fromLTRB(10, 0, 10, 0),
                 child:  Column(children: [ClipRRect(borderRadius: BorderRadius.circular(20.0),
-                child: Image.asset("batman1.jpg",width: 220)
+                child: Image.asset("batman2.jpg",width: 220)
                     ),
                   ],
                 ),
@@ -110,7 +110,7 @@ class _ConteudoState extends State<Conteudo> {
           mainAxisAlignment: MainAxisAlignment.end,
           children: [
             Container(
-              padding: EdgeInsets.all(10),
+              padding: EdgeInsets.all(20),
                   child: ElevatedButton(
                     
                     child: Text("Ver mais"),
