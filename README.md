@@ -1,16 +1,36 @@
-# loja_geek
 
-A new Flutter project.
+<h1 align="center">
+    GeekStore
+</h1>
 
-## Getting Started
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/80048095/218352244-ef75da32-53b7-4b88-ac31-fe714bac1d64.gif">
+</p>
 
-This project is a starting point for a Flutter application.
+<p align="center">
+    Layout de um aplicativo, desenvolvido em Flutter
+</p>
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+### Linguagens | Bibliotecas 
+As seguintes ferramentas foram usadas na construção do projeto:
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- `Flutter`
+- `Carousel_Slider`
+- `Curved_Navigation_Bar`
+
+
+### Contribuidores
+
+<a href="https://github.com/willotavio">
+  <img src="https://avatars.githubusercontent.com/u/89710130?v=4" width="80">
+</a>
+
+<a href="https://github.com/kengiiGMs">
+  <img src="https://avatars.githubusercontent.com/u/80048095?v=4" width="80">
+</a>
+
+<a href="https://github.com/Matheus7p">
+  <img src="https://avatars.githubusercontent.com/u/88511229?v=4" width="80">
+</a>
+
